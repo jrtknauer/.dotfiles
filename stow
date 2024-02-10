@@ -7,7 +7,7 @@ DOTFILES=$HOME/.dotfiles
 pushd $DOTFILES
 for folder in "${STOW_FOLDERS[@]}"; do
         echo "stow $folder"
-	stow -D $folder
+	stow --delete $folder
 	stow $folder
 done
 
@@ -17,8 +17,13 @@ done
 XKB=xkb
 TARGET=/usr/share/X11/xkb
 echo "stow $XKB"
-sudo stow --target $TARGET -D $XKB
-sudo stow --target $TARGET $XKB
+sudo stow \
+    --target $TARGET \
+    --delete \
+    $XKB
+sudo stow \
+    --target $TARGET \
+    $XKB
 
 popd
 
