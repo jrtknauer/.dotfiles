@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-STOW_FOLDERS=(ubuntu nvim ripgrep)
+STOW_FOLDERS=(ubuntu nvim ripgrep i3 i3status)
 
 DOTFILES=$HOME/.dotfiles
 
