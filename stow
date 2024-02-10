@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
+set -eux
+
 STOW_FOLDERS=(ubuntu nvim ripgrep i3 i3status)
 
 DOTFILES=$HOME/.dotfiles
 
 pushd $DOTFILES
 for folder in "${STOW_FOLDERS[@]}"; do
-        echo "stow $folder"
 	stow --delete $folder
 	stow $folder
 done
