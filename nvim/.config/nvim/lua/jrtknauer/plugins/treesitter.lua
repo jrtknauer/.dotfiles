@@ -1,10 +1,20 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+
     build = ":TSUpdate",
+
     config = function()
         require("nvim-treesitter.configs").setup({
             ensure_installed = {
-                "bash", "lua"
+                -- Always install these
+                "c",
+                "lua",
+                "query",
+                "vim",
+                "vimdoc",
+                -- Everything else
+                "go",
+                "python"
             },
 
             sync_install = false,
@@ -20,6 +30,6 @@ return {
                 additional_vim_regex_highlighting = { "markdown" },
             },
         })
-    end
+    end,
 }
 

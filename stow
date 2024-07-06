@@ -2,7 +2,7 @@
 
 set -eux
 
-STOW_FOLDERS=(ubuntu nvim ripgrep i3 i3status)
+STOW_FOLDERS=(ubuntu nvim ripgrep i3 i3status starship)
 
 DOTFILES=$HOME/.dotfiles
 

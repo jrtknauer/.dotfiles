@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# I'm using Ubuntu/Debian - no real reason yet to bootstrap for anything else.
+
+set -eux
+
+sudo apt install -y \
+    git \
+    i3 \
+    xclip \
+    ripgrep
+
+# Not sure what version of neovim will be packaged with 24.04, but if it's
+# > 9 then go back to the deb instead of the snap. Or just build and install
+# from source, but for now KISS.
+sudo snap install nvim
